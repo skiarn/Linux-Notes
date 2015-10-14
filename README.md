@@ -2,6 +2,9 @@
 
 
 --
+command: nohup ./tianxia > server.log 2>&1 &
+Makes executables standard output go to server.log and runs in background.
+--
 You can use octal notation directly:
 
 os.Mkdir("dirname", 0700)
