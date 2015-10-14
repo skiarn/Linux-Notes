@@ -25,7 +25,7 @@ Permission Bits
 | ---rwx---  | 0070 | Group |
 | ------rwx  | 0007 | Other |
 +------------+------+-------+
-´´´
+```
 Common Permission Usages
 
 0755 Commonly used on web servers. The owner can read, write, execute. Everyone else can read and execute but not modify the file.
