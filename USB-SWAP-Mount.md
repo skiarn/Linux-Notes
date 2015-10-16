@@ -1,8 +1,10 @@
-**Find usb UUID name.**
+#Notes on how to mount usb swap-file.
+
+###Find usb UUID name.
 Connect usb and find uuid name, example: mine is: 7C66-1EE4 -> ../../sda1
 ```cat /var/log/messages```
 
-**Mount usb disk.**
+###Mount usb disk
 I mount my usb at /mnt/usb. I register my uuid to the fstab file so that it automaticly mounts on boot.
 ```
    mkdir -p /mnt/usb;
@@ -12,7 +14,7 @@ I mount my usb at /mnt/usb. I register my uuid to the fstab file so that it auto
    
  ```
 
-**Make swap**
+###Make swap
 * Saves swap configuration to dphys-swapfile.
 * Creates a swapfile on my usb.
 * Create a swap memory space and turn it on.
@@ -24,9 +26,14 @@ I mount my usb at /mnt/usb. I register my uuid to the fstab file so that it auto
    sudo cp /etc/fstab /etc/fstab.old; echo '/mnt/usb/swap.file none swap defaults 0 0' | sudo tee -a /etc/fstab;
 ```
 
-**Success**
+###Success**
 Shows mount point statistics
 ```df -h /mnt/usb/```
 
 Shows memory statistics
 ```free -h```
+
+### Unmounting or removing usb disk will probobly cause system crash.
+>Turn off swap to be safe.
+`swapoff /mnt/usb/swap.file`
+
