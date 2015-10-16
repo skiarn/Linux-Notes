@@ -13,10 +13,10 @@ I mount my usb at /mnt/usb. I register my uuid to the fstab file so that it auto
  ```
 
 **Make swap**
-1. Saves swap configuration to dphys-swapfile.
-2. Creates a swapfile on my usb.
-3. Create a swap memory space and turn it on.
-4. Register swapfile in fstab so that it mounts on bootup.
+* Saves swap configuration to dphys-swapfile.
+* Creates a swapfile on my usb.
+* Create a swap memory space and turn it on.
+* Register swapfile in fstab so that it mounts on bootup.
 ```
    sudo printf '%s\n%s\n' 'CONF_SWAPSIZE=1024' 'CONF_SWAPFILE=/mnt/sda1/swap.file' | sudo dd of=/etc/dphys-swapfile;
    sudo dd if=/dev/zero of=/mnt/usb/swap.file bs=1M count=1024; sudo chmod 600 /mnt/usb/swap.file;
@@ -24,7 +24,7 @@ I mount my usb at /mnt/usb. I register my uuid to the fstab file so that it auto
    sudo cp /etc/fstab /etc/fstab.old; echo '/mnt/usb/swap.file none swap defaults 0 0' | sudo tee -a /etc/fstab;
 ```
 
-** Success **
+**Success**
 Shows mount point statistics
 ```df -h /mnt/usb/```
 
