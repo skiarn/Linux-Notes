@@ -1,10 +1,3 @@
-Pi sd card:
-
-BSD Name:	disk3s1
-
-unmount using disk utility.
-sudo dd bs=1m if=/Users/andreaswestberg/Desktop/rasb/2015-05-05-raspbian-wheezy.img of=/dev/rdisk3
-sudo diskutil eject /dev/rdisk3
 #Install
 
 ###Prepare Rasberry Pi sd card:
