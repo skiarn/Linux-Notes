@@ -2,8 +2,21 @@
 
 
 --
-command: nohup ./tianxia > server.log 2>&1 &
-Makes executables standard output go to server.log and runs in background.
+Creates user `sudo adduser tianxia`
+
+Makes executables standard output go to server.log and runs in background `nohup ./tianxia > server.log 2>&1 &`
+
+####Setup bitbucket.
+```
+ssh-keygen -f ~/.ssh/bitbucketid -C “bitbucketid”;
+eval `ssh-agent -s`;
+ssh-add ~/.ssh/bitbucketid;
+```
+vi ~/.ssh/bitbucketid.pub
+past pub key at bitbucket.com
+
+pull latest: `eval `ssh-agent -s`; ssh-add ~/.ssh/bitbucketid;git pull`
+
 --
 You can use octal notation directly:
 
