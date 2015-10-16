@@ -1,6 +1,6 @@
 #Install
 
-###Prepare Rasberry Pi sd card:
+###Prepare Rasberry Pi sd card
 Lookup disk name, ex, About this mac -> System Report... -> Storage view micro SD card.  
 ex: `BSD Name:	disk3s1`
 
@@ -10,7 +10,7 @@ ex: `BSD Name:	disk3s1`
  sudo diskutil eject /dev/rdisk3
 ```
 
-###Setup correct protection, setup access from mac-book.
+###Setup correct protection, setup access from mac-book
 ``` 
  cd /Users/andreaswestberg/.ssh/
  ssh-keygen -t rsa -b 4096 -C "rasberry"
@@ -22,12 +22,16 @@ ex: `BSD Name:	disk3s1`
 
 **Configure access settings**
  `sudo vi /etc/ssh/sshd_config`
- Change port: Port XXXX
- >PasswordAuthentication no
- ´´´ 
+ >Change port: 
+ ```
+ Port XXXX
+ PasswordAuthentication no
+ ```
+ >Then
+ ```
  sudo /etc/init.d/ssh reload
  sudo /etc/init.d/ssh restart
- ´´´
+ ```
 
 **Update system**
 ```
