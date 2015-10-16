@@ -18,7 +18,11 @@
   ```
 
 ###Setup
-`export PATH=$PATH:$HOME/go/bin`
+```
+export PATH=$PATH:$HOME/go/bin
+**eller**
+cd ~/; echo 'export PATH=$PATH:$HOME/go/bin' >> .profile 
+```
 
 ###Run
 ```
