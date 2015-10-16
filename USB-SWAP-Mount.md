@@ -26,7 +26,7 @@ I mount my usb at /mnt/usb. I register my uuid to the fstab file so that it auto
    sudo cp /etc/fstab /etc/fstab.old; echo '/mnt/usb/swap.file none swap defaults 0 0' | sudo tee -a /etc/fstab;
 ```
 
-###Success**
+###Success
 Shows mount point statistics
 ```df -h /mnt/usb/```
 
