@@ -35,4 +35,6 @@ func main() {
 }
 ```
 
-
+###Great articles:
+**About Bootstrapping Go 1.5 on non Intel platforms**
+http://dave.cheney.net/category/golang
