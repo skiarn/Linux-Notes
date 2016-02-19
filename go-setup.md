@@ -21,6 +21,8 @@
 ```
 export PATH=$PATH:$HOME/go/bin
 **eller**
+export GOPATH=`pwd`
+**eller**
 cd ~/; echo 'export PATH=$PATH:$HOME/go/bin' >> .profile 
 ```
 
