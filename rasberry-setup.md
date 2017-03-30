@@ -15,6 +15,8 @@ ex: `BSD Name:	disk3s1`
  cd /Users/andreaswestberg/.ssh/
  ssh-keygen -t rsa -b 4096 -C "rasberry"
  ```
+** Enable rasberry pi SSH demon **
+ see: https://www.raspberrypi.org/documentation/remote-access/ssh/README.md
 
 **Copy to raspberry Pi authorised keys**
 * Create dir with correct rights:  `mkdir ~/.ssh/;chmod 700 ~/.ssh`
