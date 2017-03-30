@@ -19,10 +19,12 @@ ex: `BSD Name:	disk3s1`
  see: https://www.raspberrypi.org/documentation/remote-access/ssh/README.md
 
 **Copy to raspberry Pi authorised keys**
-* Create dir with correct rights:  `mkdir ~/.ssh/;chmod 700 ~/.ssh`
-* Paste: rasberry.pub mac-book key in vi ~/.ssh/authorized_keys  
- exmple: scp mydevelopercomputer@192.168.1.99:~/.ssh/raspberry.pub ~/.ssh/authorized_keys
-
+* Create dir with correct rights:  mkdir ~/.ssh/;chmod 700 ~/.ssh`
+* Paste: rasberry.pub mac-book key in 
+ `vi ~/.ssh/authorized_keys`
+ exmple: 
+ `scp mydevelopercomputer@192.168.1.99:~/.ssh/raspberry.pub ~/.ssh/authorized_keys`
+ 
 **Configure access settings**
  `sudo vi /etc/ssh/sshd_config`
  >Change port: 
