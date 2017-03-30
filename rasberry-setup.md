@@ -31,6 +31,8 @@ ex: `BSD Name:	disk3s1`
  ```
  Port XXXX
  PasswordAuthentication no
+ ChallengeResponseAuthentication no
+ UsePAM no
  ```
  >Then
  ```
